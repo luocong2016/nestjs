@@ -1,11 +1,12 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { CatsController } from './cats.controller';
-import { CatDto } from './dto/create-cat.dto';
 import { CatsService } from './cats.service';
+import { CatDto } from './dto/create-cat.dto';
 
 describe('Cats Controller', () => {
   let controller: CatsController;
   let service: CatsService;
+
   const createCatDto: CatDto = {
     name: 'Cat #1',
     breed: 'Breed #1',

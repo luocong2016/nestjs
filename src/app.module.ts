@@ -7,6 +7,8 @@ import { CatsModule } from './cats/cats.module';
 @Module({
   imports: [
     ConfigModule.forRoot(),
+
+    /* mongoose */
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -16,6 +18,7 @@ import { CatsModule } from './cats/cats.module';
         };
       },
     }),
+
     CatsModule,
   ],
 })
